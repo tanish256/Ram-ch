@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Champions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="root">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <a class="McButton" data="hamburger-menu">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                </div>
+                <ul id="menu">
+                    <a href="#" class="active"><li>Home</li></a>
+                    <a href="services.html"><li>Services</li></a>
+                    <a href="partnerships.html"><li>Partnerships & Sustainability</li></a>
+                    <a href=""><li>Our Coffee</li></a>
+                    <a href=""><li>About Us</li></a>
+                    <button onclick="ctnbtn()" style="display: none;">Contact Us</button>
+                </ul>
+                <button onclick="ctnbtn()">Contact Us</button>
+            </nav>
+            <div class="banner">
+                <img src="bg-main.png" alt="">
+                <div class="info">
+                    <div class="titos">
+                        <h2>USA Importer & Exporter Of African Coffee Beans</h2>
+                    <h1>RAM CHAMPIONS LLC - <span>DALLAS TEXAS</span></h1>
+                    </div>
+                    <div class="cecofa">
+                        <div class="inf">
+                            <h3>In partnership with CECOFA, Uganda</h3>
+                            <p>Central coffee famers Association </p>
+                        </div>
+                        <img src="image 1 (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="certs">
+            <img src="gcp.png" alt="">
+            <img src="ft.png" alt="">
+            <img src="image 2.png" alt="">
+            <img src="4c-logo.svg" alt="">
+        </section>
+        <div class="bg_video">
+            <video  autoplay muted loop>
+                <source src="Kerchanshe Coffee Farm Promo Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <section class="contnt">
+            <div class="content">
+                <h2>Bridging Continents: <br> Premium Ugandan Coffee
+                    For The U.S. Market <br>
+                    Ram Champions LLC
+                </h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt suscipit illum aliquid eveniet sed, incidunt quia natus quod. Repellat assumenda nemo neque nulla sed possimus omnis modi minus inventore.</p>
+            </div>
+            <div class="grid-img">
+                <img src="image567.png" alt="">
+                <img src="Coffee Closes Moderately Lower as Honduras Coffee Exports Jump.png" alt="">
+                <img src="DeWatermark.ai_1730392940146.png" alt="">
+                <img src="image.png" alt="">
+            </div>
+        </section>
+        <section class="b4-footer">
+            <img src="oljuuk.png" alt="">
+            <h2>WE IMPORT COFFEE BEANS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis laudantium iusto, enim aliquam aperiam natus eveniet unde cumque nobis suscipit aut vel mollitia similique vero. Cumque est repudiandae ullam consequuntur!</p>
+            <button>Contact Us</button>
+        </section>
+        <footer>
+            <p> &copy; 2023 Ram Champions LLC, Dallas, Texas, USA | All Rights Reserved | Terms Of Use</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var McButton = $("[data=hamburger-menu]");
+        var McBar1 = McButton.find("b:nth-child(1)");
+        var McBar2 = McButton.find("b:nth-child(2)");
+        var McBar3 = McButton.find("b:nth-child(3)");
+        McButton.click(function () {
+            $(this).toggleClass("active");
+            $("#menu").slideToggle({
+                duration: 500,
+                easing: "swing",
+                start: function () {
+                    $("#menu").css("display", "flex");
+                }
+            });
+            if (McButton.hasClass("active")) {
+                McBar1.velocity({ top: "50%" }, { duration: 200, easing: "swing" });
+                McBar3.velocity({ top: "50%" }, { duration: 200, easing: "swing" })
+                    .velocity({ rotateZ: "90deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+                McButton.velocity({ rotateZ: "135deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+            } else {
+                McButton.velocity("reverse");
+                McBar3.velocity({ rotateZ: "0deg" }, { duration: 800, easing: [500, 20] })
+                    .velocity({ top: "100%" }, { duration: 200, easing: "swing" });
+                McBar1.velocity("reverse", { delay: 800 });
+            }
+        });
+        function ctnbtn(){
+            window.location.href = "/contact.html";
+        } 
+    </script>
+</body>
+
+</html>

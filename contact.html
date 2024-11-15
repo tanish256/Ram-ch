@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Champions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #FFFEFA;">
+    <div class="root">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <a class="McButton" data="hamburger-menu">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                </div>
+                <ul id="menu">
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="services.html">
+                        <li>Services</li>
+                    </a>
+                    <a href="">
+                        <li>Partnerships & Sustainability</li>
+                    </a>
+                    <a href="">
+                        <li>Our Coffee</li>
+                    </a>
+                    <a href="">
+                        <li>About Us</li>
+                    </a>
+                    <button onclick="ctnbtn()" style="display: none;">Contact Us</button>
+                </ul>
+                <button onclick="ctnbtn()">Contact Us</button>
+            </nav>
+        </header>
+        <section class="cntct">
+            <img src="cntct-bg.png" alt="">
+            <div class="contact-sect">
+                <div class="info">
+                    <h2>Get In Touch With Us</h2>
+                    <p>We’re here to help you bring the best of African coffee to the world. Contact us to explore
+                        sourcing, custom roasting, and sustainable coffee solutions.</p>
+                        <ul>
+                            <li>8 Natchez Court, Columbia SC 29229, USA</li>
+                            <li>+1-803-239-9068 / +1-716-348-0015</li>
+                            <li>info@ramchampions.com</li>
+                        </ul>
+                </div>
+                <form action="">
+                    <div class="grid">
+                        <label>
+                            <span>Full name</span>
+                            <input>
+                          </label>
+                          <label>
+                            <span>Company name</span>
+                            <input>
+                          </label>
+                          <label>
+                            <span>Email</span>
+                            <input>
+                          </label>
+                          <label>
+                            <span>Phone Number</span>
+                            <input>
+                          </label>
+                    </div>
+                    <label class="ta">
+                        <span>Phone Number</span>
+                        <textarea name="" id="" rows="6" cols="40"></textarea>
+                      </label>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p> &copy;  2023 Ram Champions LLC, Dallas, Texas, USA | All Rights Reserved | Terms Of Use</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var McButton = $("[data=hamburger-menu]");
+        var McBar1 = McButton.find("b:nth-child(1)");
+        var McBar2 = McButton.find("b:nth-child(2)");
+        var McBar3 = McButton.find("b:nth-child(3)");
+        McButton.click(function () {
+            $(this).toggleClass("active");
+            $("#menu").slideToggle({
+                duration: 500,
+                easing: "swing",
+                start: function () {
+                    $("#menu").css("display", "flex");
+                }
+            });
+            if (McButton.hasClass("active")) {
+                McBar1.velocity({ top: "50%" }, { duration: 200, easing: "swing" });
+                McBar3.velocity({ top: "50%" }, { duration: 200, easing: "swing" })
+                    .velocity({ rotateZ: "90deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+                McButton.velocity({ rotateZ: "135deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+            } else {
+                McButton.velocity("reverse");
+                McBar3.velocity({ rotateZ: "0deg" }, { duration: 800, easing: [500, 20] })
+                    .velocity({ top: "100%" }, { duration: 200, easing: "swing" });
+                McBar1.velocity("reverse", { delay: 800 });
+            }
+        });
+    </script>
+</body>
+
+</html>
