@@ -814,12 +814,11 @@ form > ul li{
         width: 70px;
     }
     .product {
-        width: 99%;
+        width: 90%;
         margin: 0 auto;
         padding: 20px 0;
         display: flex;
         flex-direction: column;
-        gap: 30px;
     }
     .product_full_img {
         height: 100%;
@@ -861,6 +860,29 @@ form > ul li{
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+    .mission_info{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-uss{
+        width: 100%;
+        height: 80vh !important;
+        background-image: url("servicesbg.png");
+        background-size: cover;
+        position: relative;
+    }
+    .about-content{
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        transform: translate(-30%, -10%);
+        color: #fff;
+        font-family: arial-round;
     }
 }
 
