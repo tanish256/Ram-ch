@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 body {
     margin: 0;
     width: 100%;
@@ -7,21 +8,20 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.root {
-
-}
+.root {}
 
 button {
     cursor: pointer;
 }
-.ss-cecofa{
+
+.ss-cecofa {
     display: flex;
-    padding:5% 8%;
+    padding: 5% 8%;
     gap: 3%;
 }
 
 
-.content{
+.content {
     padding: 3% 8%;
 
     table {
@@ -30,18 +30,20 @@ button {
         border-collapse: collapse;
         width: 60%;
         margin: 5% 0;
-      }
-      
-      td, th {
+    }
+
+    td,
+    th {
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
-      }
-      
-      tr:nth-child(even) {
+    }
+
+    tr:nth-child(even) {
         background-color: #dddddd;
-      }
+    }
 }
+
 .cntct {
     height: 90vh;
     width: 100%;
@@ -95,9 +97,11 @@ button {
             width: 90%;
             justify-content: center;
         }
-        label span{
+
+        label span {
             color: white;
         }
+
         input {
             border-radius: 3px;
             border: none;
@@ -119,9 +123,11 @@ button {
             background-color: #F8E6AC;
             padding: 10px 25px;
         }
-        .ta{
+
+        .ta {
             width: 90%;
         }
+
         textarea {
             font-size: 16px;
             resize: none;
@@ -443,50 +449,55 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .ss-cecofa{
+    .ss-cecofa {
         flex-direction: column;
     }
-    .cecofa{
-        .inf{
-    }
-}
-.certs {
 
-    img {
-        width: 20%;
-        height: auto;
+    .cecofa {
+        .inf {}
     }
-}
 
-    .cntct{
-        .contact-sect{
-        height: auto;
-        margin: 10px;
-        flex-direction: column;
-        .info{
-            width: 100%;
-        }
-        form{
-            width: 100%;
+    .certs {
+
+        img {
+            width: 20%;
+            height: auto;
         }
     }
+
+    .cntct {
+        .contact-sect {
+            height: auto;
+            margin: 10px;
+            flex-direction: column;
+
+            .info {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
     }
-    
-    .serv .card{
+
+    .serv .card {
         width: 90%;
         aspect-ratio: unset;
         padding: 30px;
     }
-    nav{
+
+    nav {
         button {
             display: none;
         }
     }
-   .b4-footer{
-    button{
-        font-size: 30px !important;
+
+    .b4-footer {
+        button {
+            font-size: 30px !important;
+        }
     }
-   }
 
     #menu {
         button {
@@ -582,51 +593,302 @@ footer {
     }
 
     @media (max-width: 600px) {
-        .content{
-            table{
+        .content {
+            table {
                 width: 100%;
             }
-            
+
         }
+
         .cntct {
-            height: auto; /* Allow height to adjust based on content */
+            height: auto;
+            /* Allow height to adjust based on content */
         }
-    
+
         .contact-sect {
             flex-direction: column;
-            width: 80%; /* Make it narrower to fit within smaller screens */
+            width: 80%;
+            /* Make it narrower to fit within smaller screens */
             padding: 5%;
         }
-    
-        .contact-sect .info, .contact-sect form {
-            width: 100%; /* Set both info and form to take full width */
-        }
-    
+
+        .contact-sect .info,
         .contact-sect form {
-            padding: 10px; /* Reduce padding on form to save space */
+            width: 100%;
+            /* Set both info and form to take full width */
         }
-    
+
+        .contact-sect form {
+            padding: 10px;
+            /* Reduce padding on form to save space */
+        }
+
         .contact-sect .grid {
-            grid-template-columns: 1fr !important; /* Stack form fields in a single column */
-            width: 100%; /* Ensure it fits within the contact-sect area */
+            grid-template-columns: 1fr !important;
+            /* Stack form fields in a single column */
+            width: 100%;
+            /* Ensure it fits within the contact-sect area */
         }
-    
-        .contact-sect input, .contact-sect textarea {
-            width: 100% !important; /* Full width for input and textarea */
+
+        .contact-sect input,
+        .contact-sect textarea {
+            width: 100% !important;
+            /* Full width for input and textarea */
         }
     }
+
     .cntct {
-        min-height: 90vh; /* Use min-height to keep responsiveness */
-        height: auto; /* Allow height to adjust */
+        min-height: 90vh;
+        /* Use min-height to keep responsiveness */
+        height: auto;
+        /* Allow height to adjust */
     }
-    
+
     .contact-sect {
-        height: auto; /* Allow dynamic height based on content */
+        height: auto;
+        /* Allow dynamic height based on content */
     }
-    .contact-sect input, .contact-sect textarea {
+
+    .contact-sect input,
+    .contact-sect textarea {
         width: 100%;
-        box-sizing: border-box; /* Ensure padding doesn't increase element width */
+        box-sizing: border-box;
+        /* Ensure padding doesn't increase element width */
     }
-            
+
+
+}
+
+
+/* -------------------------------------------------------------------------- 
+Yason Design Start Here Below
+ -------------------------------------------------------------------------- */
+
+/* brand section */
+.brand {
+    width: 100%;
+    background-color: #BA8458;
+}
+.brand-img-container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+/* product section */
+.product {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    gap: 30px;
+}
+
+.product_full_img {
+    height: 450px;
+    width: 700px;
+}
+.product_full_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product_small_img {
+    display: flex;
+    gap: 10px;
+}
+
+.product_small_img img {
+    height: 80px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    border-radius: 5px;
+}
+
+.product_info h3 {
+    font-family: arial-round;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38.73px;
+    text-align: left;
+}
+
+.product_info p {
+    font-family: arial-round;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.product_info ul li {
+    font-family: arial-round;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+/* Checkout */
+.checkout-section{
+    width: 80%;
+    margin: 0 auto;
+    padding:  30px 0;
+    display: flex;
+    align-items: center;
+    gap: 20%;
+}
+.bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+form > lable{
+    display: block;
+}
+form > select{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+form > ul li{
+    list-style: none;
+}
+
+/* payment */
+.payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+.payment button{
+    width: 189px;
+    height: 50px;
+    top: 2027px;
+    left: 816px;
+    gap: 0px;
+    border-radius: 100px;
+    opacity: 0px;
+    border: none;
+}
+.paypal{
+    background: #FFC439;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    background-color: #2C2E2F;
+    color: #fff;
+}
+.card img{
+    width: 30px;
+    height: 30px;
+}
+@media (max-width: 600px){
+    .brand-img-container{
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        scrollbar-width: scroll;
+    }
+    .brand_img img{
+        width: 70px;
+    }
+    .product {
+        width: 99%;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .product_full_img {
+        height: 100%;
+        width: 100%;
+    }
+    .product_small_img img {
+        height: 55px;
+        margin: 10px 0;
+        cursor: pointer;
+        display: block;
+        border-radius: 5px;
+    }
+    .checkout-section{
+        width: 99%;
+        margin: 0 auto;
+        padding:  30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20%;
+    }
+    .info {
+        position: absolute;
+        height: 100%;
+        align-self: center;
+        justify-content: space-between;
+        top: 0;
+        width: 100%;
+        left: 5%;
+        bottom: 0;
+        flex-direction: column;
+        display: flex;
+        padding: 4% 2%;
+        background-color: #345733cc;
+
+    }
+    .about-banner-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+/* about us  */
+.about-banner{
+    width: 100%;
+    height: 70vh;
+    background-image: url("./bg-coffee.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-banner-text{
+    display: flex;
+    align-items: center;
+}
+.left{
+    width: 100%;
+}
+.right{
+    flex: 2;
+}
+.right > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 
 }

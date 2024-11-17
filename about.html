@@ -155,20 +155,45 @@
                 </ul>
                 <button onclick="ctnbtn()">Contact Us</button>
             </nav>
-            <div class="banner">
-                <img src="bg-coffee.png" alt="">
-                <div class="hero">
-                    <div class="inf-hero">
-                        <h2>Discover the Taste of Real Coffee</h2>
-                        <p>Ram Champions coffee</p>
-                        <button>Buy Now</button>
-                    </div>
-                    <img src="cf-hero.png" alt="">
-                </div>
-            </div>
+            
         </header>
 
-        <!-- Start Brand Section -->
+        <section class="b4-footer">
+            <img src="oljuuk.png" alt="">
+            <h2>Read About Us</h2>
+            <p>Together with CECOFA, we're building a sustainable future by empowering coffee-growing communities, promoting fair practices, and delivering traceable, quality coffee. Join us in creating positive change—one cup at a time.</p>
+            <button>Contact Us</button>
+        </section>
+
+        <section class="certs">
+            <img src="gcp.png" alt="">
+            <img src="ft.png" alt="">
+            <img src="image 2.png" alt="">
+            <img src="4c-logo.svg" alt="">
+        </section>
+
+        <div class="about-banner">
+            <div class="about-banner-text">
+                <h1>About Us</h1>
+                <img src="g-coffee.png" alt="">
+                <h1>Nice Coffee</h1>
+            </div>
+        </div>
+
+        <section class="product">
+            <div class="product_info">
+                <h3>Ram Champions African Specialty Whole Bean Roasted Coffee</h3>
+                <p>Discover the extraordinary taste of Ram Champions African Specialty Whole Bean Coffee, a premium
+                    blend crafted from specialty-grade Robusta beans grown in the heart of East Africa. This coffee,
+                    meticulously sourced from Uganda, reflects the rich and bold flavors of its high-altitude origins,
+                    providing a deep and satisfying experience in every sip.</p>
+            </div>
+            <div class="product-img">
+                <div class="product_full_img">
+                    <img src="banner.png" id="full_image" alt="">
+                </div>
+            </div>
+        </section>
 
         <section class="brand">
             <div class="brand-img-container">
@@ -186,87 +211,7 @@
                 </div>
             </div>
         </section>
-        <!-- End of Brand Section -->
-
-        <!-- Start of Product Section -->
-        <section class="product">
-            <div class="product-img">
-                <div class="product_full_img">
-                    <img src="banner.png" id="full_image" alt="">
-                </div>
-                <div class="product_small_img">
-                    <img src="servicesbg.png" alt="" onclick="myFunction(this)">
-                    <img src="image.png" alt="" onclick="myFunction(this)">
-                    <img src="image567.png" alt="" onclick="myFunction(this)">
-                    <img src="cntct-bg.png" alt="" onclick="myFunction(this)">
-                </div>
-            </div>
-            <div class="product_info">
-                <h3>Ram Champions African Specialty Whole Bean Roasted Coffee</h3>
-                <p>Discover the extraordinary taste of Ram Champions African Specialty Whole Bean Coffee, a premium
-                    blend crafted from specialty-grade Robusta beans grown in the heart of East Africa. This coffee,
-                    meticulously sourced from Uganda, reflects the rich and bold flavors of its high-altitude origins,
-                    providing a deep and satisfying experience in every sip.</p>
-                <ul>
-                    <li>GTIN/UPC: 198715282504</li>
-                    <li>Origin: East Africa - Uganda</li>
-                    <li>Roast Level: Whole Bean</li>
-                    <li>Roast Type: Specialty</li>
-                    <li>Bean Type: Robusta</li>
-                    <li>Flavor Profile: Rich, Bold, Deep</li>
-                    <li>Package Size: 12 oz</li>
-                    <li>Package Type: Bag</li>
-                </ul>
-            </div>
-        </section>
-        <!-- End of Product Section -->
-
-        <!-- Start Of Checkout Section -->
-        <div class="checkout">
-            <div class="checkout-section">
-                <div class="checkout_left">
-                    <div class="top">
-                        <h3>Checkout</h3>
-                        <h4>Ram Champions African Specialty Whole Bean Roasted Coffee</h4>
-                        <h5>14.99</h5>
-                    </div>
-                    <div class="bottom">
-                        <form>
-                            <label for="checkout">Quantity</label>
-                            <select name="checkout" id="checkout">
-                                <option value="">Quantity: </option>
-                                <option value="1">Quantity: 1</option>
-                                <option value="2">Quantity: 2</option>
-                                <option value="3">Quantity: 3</option>
-                                <option value="4">Quantity: 4</option>
-                            </select>
-                            <div>
-                                <p>Subtotal: $14.99</p>
-                                <p>Tax: $0.00</p>
-                                <p>Total: $14.99</p>
-                                <p><b>Total: $14.99 USD</b></p>
-                            </div>
-                        </form>
-                        <div class="qr-code">
-                            <img src="image 5.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout_right">
-                    <div class="payment">
-                        <button class="paypal">
-                            <img src="download 1.png" alt="">
-                        </button>
-                        <button class="card">
-                            <img src="Credit card.png" alt="">
-                            <span>Debit or Credit Card</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Start Of Checkout Section -->
-
+        
         <footer>
             <p> &copy; 2023 Ram Champions LLC, Dallas, Texas, USA | All Rights Reserved | Terms Of Use</p>
         </footer>
@@ -305,10 +250,10 @@
         });
         function ctnbtn() {
             window.location.href = "/contact.html";
-        } 
+        }
 
         // Yason's Javascript Function
-        function myFunction(smallImage){
+        function myFunction(smallImage) {
             let full_image = document.getElementById("full_image");
             full_image.src = smallImage.src;
         }
