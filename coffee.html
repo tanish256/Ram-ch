@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Champions</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+    @font-face {
+        font-family: arial-round;
+        src: url(arialroundedmtbold.ttf);
+    }
+    nav{
+        border-bottom: 2px solid #00390043;
+    }
+    .banner{
+        .hero{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            gap: 5%;
+            .inf-hero{
+                width: 35%;
+                flex-direction: column;
+                display: flex;
+                justify-content: center;
+                button{
+                    width: fit-content;
+                    padding: 10px 45px;
+                    font-size:19px;
+                    border: 3px solid #6F4E37;
+                    font-family: sans-serif;
+                    border-radius: 1px;
+                }
+                h2{
+                    font-size: 40px;
+                    font-family: arial-round;
+                    color: #6F4E37;
+                    margin: 0;
+                }
+                p{
+                    margin-bottom: 15%;
+                    font-size: 27px;
+                    font-weight: 500;
+                }
+            }
+            img{
+                width: 35%;
+            }
+        }
+
+    }
+    .cert-strip{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #BA8458;
+        flex-wrap: wrap;
+        img{
+            width: 40%;
+        }
+
+    }
+    .ptoduct {
+    .through{
+        display: flex;
+        img{
+            width: 24%;
+        }
+    }
+}
+    @media (max-width: 600px) {
+        .banner{
+            .hero{
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 1.5rem;
+                img{
+                    width: 80%;
+                }
+                .inf-hero{
+                    width: 100%;
+                    align-items: center;
+                    h2{
+                        width: 80%;
+                    }
+                    p{
+                        width: 80%;
+                        margin: 0;
+                        margin-bottom: 20px;
+                    }
+                    button{
+                        align-self: flex-start;
+                        margin: 0 10%;
+                    }
+                }
+            }
+        }
+    }
+</style>
+<body>
+    <div class="root">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <a class="McButton" data="hamburger-menu">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                </div>
+                <ul id="menu">
+                    <a href="/" ><li>Home</li></a>
+                    <a href="services.html"><li>Services</li></a>
+                    <a href="partnerships.html"><li>Partnerships & Sustainability</li></a>
+                    <a href="coffee.html" class="active"><li>Our Coffee</li></a>
+                    <a href="gallery.html"><li>Gallery</li></a>
+                    <a href=""><li>About Us</li></a>
+                    <button onclick="ctnbtn()" style="display: none;">Contact Us</button>
+                </ul>
+                <button onclick="ctnbtn()">Contact Us</button>
+            </nav>
+            <div class="banner">
+                <img src="bg-coffee.png" alt="">
+                <div class="hero">
+                    <div class="inf-hero">
+                        <h2>Discover the Taste of Real Coffee</h2>
+                        <p>Ram Champions coffee</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <img src="cf-hero.png" alt="">
+                </div>
+            </div>
+        </header>
+        <section class="product">
+
+        </section>
+        <section class="cert-strip">
+            <img src="image 2.png" alt="">
+            <img src="image 2.png" alt="">
+            <img src="image 2.png" alt="">
+        </section>
+        <section class="product">
+            <div class="img-show">
+                <img src="image567.png" alt="">
+                <div class="through">
+                    <img src="image567.png" alt="">
+                    <img src="image567.png" alt="">
+                    <img src="image567.png" alt="">
+                    <img src="image567.png" alt="">
+                </div>
+            </div>
+            <div class="detail">
+
+            </div>
+
+        </section>
+        <footer>
+            <p> &copy; 2023 Ram Champions LLC, Dallas, Texas, USA | All Rights Reserved | Terms Of Use</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var McButton = $("[data=hamburger-menu]");
+        var McBar1 = McButton.find("b:nth-child(1)");
+        var McBar2 = McButton.find("b:nth-child(2)");
+        var McBar3 = McButton.find("b:nth-child(3)");
+        McButton.click(function () {
+            $(this).toggleClass("active");
+            $("#menu").slideToggle({
+                duration: 500,
+                easing: "swing",
+                start: function () {
+                    $("#menu").css("display", "flex");
+                }
+            });
+            if (McButton.hasClass("active")) {
+                McBar1.velocity({ top: "50%" }, { duration: 200, easing: "swing" });
+                McBar3.velocity({ top: "50%" }, { duration: 200, easing: "swing" })
+                    .velocity({ rotateZ: "90deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+                McButton.velocity({ rotateZ: "135deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+            } else {
+                McButton.velocity("reverse");
+                McBar3.velocity({ rotateZ: "0deg" }, { duration: 800, easing: [500, 20] })
+                    .velocity({ top: "100%" }, { duration: 200, easing: "swing" });
+                McBar1.velocity("reverse", { delay: 800 });
+            }
+        });
+        function ctnbtn(){
+            window.location.href = "/contact.html";
+        } 
+    </script>
+</body>
+
+</html>

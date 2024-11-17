@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Champions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .banner {
+        height: 60vh;
+
+        h1 {
+            position: absolute;
+            align-self: center;
+            justify-content: space-between;
+            top: 0;
+            right: 0;
+            left: 0;
+            text-align: center;
+            bottom: 0;
+            font-size: 3em;
+            foznt-weight: 500;
+            color: #fffbf3;
+        }
+    }
+
+    .b4-footer {
+        margin: 5vh 0;
+
+        button {
+            border: #236055 4px solid;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #e1e1e1;
+            font-weight: normal;
+            background-color: #69696949;
+            padding: 14px 40px;
+        }
+
+        img {
+            width: 85%;
+        }
+    }
+
+    .gallery {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        background-color: black;
+        padding: 20px 0;
+        justify-content: center;
+        img {
+            max-height: 40vh;
+        }
+        video{
+            max-width: 20vw;
+            aspect-ratio: 1.5/2;
+            object-fit: cover;
+        }
+    }
+</style>
+
+<body style="background-color: #FFFEFA;">
+    <div class="root">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <a class="McButton" data="hamburger-menu">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                </div>
+                <ul id="menu">
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="services.html">
+                        <li>Services</li>
+                    </a>
+                    <a href="partnerships.html">
+                        <li>Partnerships & Sustainability</li>
+                    </a>
+                    <a href="coffee.html">
+                        <li>Our Coffee</li>
+                    </a>
+                    <a href="#" class="active">
+                        <li>Gallery</li>
+                    </a>
+                    <a href="">
+                        <li>About Us</li>
+                    </a>
+                    <button onclick="ctnbtn()" style="display: none;">Contact Us</button>
+                </ul>
+                <button onclick="ctnbtn()">Contact Us</button>
+            </nav>
+        </header>
+        <div class="gallery">
+            <img src="gallery/IMG-20241111-WA0004.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0005.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0006.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0007.jpg" alt="">
+            <video src="gallery/VID-20241114-WA0005.mp4" autoplay muted loop></video>
+            <img src="gallery/IMG-20241111-WA0008.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0009.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0010.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0011.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0032.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0033.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0034.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0035.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0036.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0037.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0038.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0039.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0040.jpg" alt="">
+            <video src="gallery/VID-20241114-WA0001.mp4" autoplay muted loop></video>
+            <img src="gallery/IMG-20241111-WA0041.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0042.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0043.jpg" alt="">
+            <video src="gallery/VID-20241114-WA0003.mp4" autoplay muted loop></video>
+            <img src="gallery/IMG-20241111-WA0044.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0045.jpg" alt="">
+            <img src="gallery/IMG-20241111-WA0046.jpg" alt="">
+            <video src="gallery/VID-20241114-WA0004.mp4" autoplay muted loop></video>
+        </div>
+        <footer>
+            <p> &copy; 2023 Ram Champions LLC, Dallas, Texas, USA | All Rights Reserved | Terms Of Use</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var McButton = $("[data=hamburger-menu]");
+        var McBar1 = McButton.find("b:nth-child(1)");
+        var McBar2 = McButton.find("b:nth-child(2)");
+        var McBar3 = McButton.find("b:nth-child(3)");
+        McButton.click(function () {
+            $(this).toggleClass("active");
+            $("#menu").slideToggle({
+                duration: 500,
+                easing: "swing",
+                start: function () {
+                    $("#menu").css("display", "flex");
+                }
+            });
+            if (McButton.hasClass("active")) {
+                McBar1.velocity({ top: "50%" }, { duration: 200, easing: "swing" });
+                McBar3.velocity({ top: "50%" }, { duration: 200, easing: "swing" })
+                    .velocity({ rotateZ: "90deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+                McButton.velocity({ rotateZ: "135deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+            } else {
+                McButton.velocity("reverse");
+                McBar3.velocity({ rotateZ: "0deg" }, { duration: 800, easing: [500, 20] })
+                    .velocity({ top: "100%" }, { duration: 200, easing: "swing" });
+                McBar1.velocity("reverse", { delay: 800 });
+            }
+        });
+        function ctnbtn() {
+            window.location.href = "/contact.html";
+        } 
+    </script>
+</body>
+
+</html>

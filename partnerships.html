@@ -38,13 +38,32 @@
         padding: 10px 45px;
         background-color: #07280549;
         color: #ffffff;
-        font-size: 16px;
+        font-size: 19px;
         margin-top: 30px;
+        font-weight: bold;
         border-radius: 3px;
         backdrop-filter: blur(1);
-        border: #6DB33F 3px solid;
+        border: #6DB33F 4px solid;
         font-family: Arial, Helvetica, sans-serif;
     }
+    }
+    @media (max-width: 600px) {
+        .banner{
+            .inf{
+                width: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1{
+                    width: 90%;
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+    .ss-cecofa, .content{
+        font-size: 19px;
     }
 </style>
 <body>
@@ -63,7 +82,8 @@
                     <a href="/" ><li>Home</li></a>
                     <a href="services.html"><li>Services</li></a>
                     <a href="#" class="active"><li>Partnerships & Sustainability</li></a>
-                    <a href=""><li>Our Coffee</li></a>
+                    <a href="coffee.html"><li>Our Coffee</li></a>
+                    <a href="gallery.html"><li>Our Coffee</li></a>
                     <a href=""><li>About Us</li></a>
                     <button onclick="ctnbtn()" style="display: none;">Contact Us</button>
                 </ul>
@@ -107,12 +127,8 @@
 
             <table>
                 <tr>
-                    <th colspan="2" style="text-align: center;">Coffee Profile</th>
+                    <th colspan="2" style="text-align: center; background-color: #355834; color: white;">Coffee Profile</th>
                   </tr>
-                <tr>
-                  <th>Company</th>
-                  <th>Contact</th>
-                </tr>
                 <tr>
                   <td>Alfreds Futterkiste</td>
                   <td>Maria Anders</td>

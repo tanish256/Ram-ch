@@ -8,7 +8,7 @@ body {
 }
 
 .root {
-    display: grid;
+
 }
 
 button {
@@ -28,7 +28,8 @@ button {
         background-color: ;
         font-family: arial, sans-serif;
         border-collapse: collapse;
-        width: 100%;
+        width: 60%;
+        margin: 5% 0;
       }
       
       td, th {
@@ -442,6 +443,21 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .ss-cecofa{
+        flex-direction: column;
+    }
+    .cecofa{
+        .inf{
+    }
+}
+.certs {
+
+    img {
+        width: 20%;
+        height: auto;
+    }
+}
+
     .cntct{
         .contact-sect{
         height: auto;
@@ -510,9 +526,12 @@ footer {
 
     .contnt {
         flex-direction: column;
+        align-items: center;
 
         .content {
             width: 100%;
+            padding: 2% 0;
+            align-self: center;
         }
 
         .grid-img {
@@ -527,6 +546,7 @@ footer {
 
         .info {
             width: 90%;
+            height: unset;
             left: unset;
         }
 
@@ -562,6 +582,12 @@ footer {
     }
 
     @media (max-width: 600px) {
+        .content{
+            table{
+                width: 100%;
+            }
+            
+        }
         .cntct {
             height: auto; /* Allow height to adjust based on content */
         }
