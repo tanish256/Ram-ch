@@ -117,6 +117,7 @@ button {
         width: 50%;
     }
     img{
+        object-fit: cover;
         width: 40%;
     }
 }
@@ -318,7 +319,6 @@ nav {
         object-fit: cover;
         z-index: 0;
     }
-
     .info {
         position: absolute;
         height: 60%;
@@ -326,16 +326,22 @@ nav {
         justify-content: space-between;
         top: 0;
         width: 50%;
+        backdrop-filter: blur(5px);
         left: 5%;
         bottom: 0;
         flex-direction: column;
         display: flex;
         padding: 4% 2%;
         background-color: #345733cc;
+        background-image: url(gallery/flag3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         h2 {
             font-size: 33px;
             color: #fffbf3;
+            z-index: 1;
             font-family: arial-round;
         }
 
