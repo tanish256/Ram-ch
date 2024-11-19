@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Champions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .abt-main{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1,p{
+                margin: 10px 0;
+                width: 70%;
+            }
+            p{
+                font-size: 18px;
+            }
+            h1{
+                font-size: 34px;
+            }
+        }
+        .abt-img{
+            display: flex;
+            width: 100%;
+            margin: 3% 0;
+            justify-content: center;
+            gap: 2%;
+            img{
+                width: 25%;
+                border-radius: 5px;
+            }
+        }
+        .O-values{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ct-values{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+            img{
+                width: 35%;
+                border-radius: 10px;
+            }
+            .inf{
+                width: 35%;
+            }
+        }
+        .abt-lead{
+            display: flex;
+            margin: 2% 0;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            h2,p{
+                margin: 10px 0;
+                width: 70%;
+            }
+        }
+        .team-cards{
+            width: 90%;
+            margin: 2% 0;
+            display: flex;
+            gap: 3%;
+            justify-content: center;
+            .tcard{
+                width: 20%;
+                img{
+                    width: 100%;
+                    aspect-ratio: 1/1.1;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 3%;
+                }
+                h4,h5{
+                    margin: 0;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <a class="McButton" data="hamburger-menu">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                </div>
+                <ul id="menu">
+                    <a href="index.html" ><li>Home</li></a>
+                    <a href="services.html"><li>Services</li></a>
+                    <a href="partnerships.html"><li>Partnerships & Sustainability</li></a>
+                    <a href="coffee.html"><li>Our Coffee</li></a>
+                    <a href="gallery.html" ><li>Gallery</li></a>
+                    <a href="#" class="active"><li>About Us</li></a>
+                    <button onclick="ctnbtn()" style="display: none;">Contact Us</button>
+                </ul>
+                <button onclick="ctnbtn()">Contact Us</button>
+            </nav>
+        </header>
+        <section class="abt-main">
+            <h1 class="arial">We Are Ram Champions</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea at sapiente earum, qui labore ab ullam! Ipsam maxime, sunt sequi sed neque recusandae itaque laudantium ea obcaecati tenetur nam veniam?</p>
+            <div class="abt-img">
+                <img src="image567.png" alt="">
+                <img src="image567.png" alt="">
+                <img src="image567.png" alt="">
+            </div>
+        </section>
+        <section class="certs">
+            <img src="gcp.png" alt="">
+            <img src="ft.png" alt="">
+            <img src="image 2.png" alt="">
+            <img src="4c-logo.svg" alt="">
+        </section>
+        <section class="O-values">
+            <h2 class="arial">Our Values</h2>
+            <div class="ct-values">
+                <img src="image567.png" alt="">
+                <div class="inf">
+                    <h3>Create brands</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui earum distinctio iure exercitationem vitae! Non ipsa harum, soluta quae iusto, exercitationem quasi aperiam veniam, magni libero odit! Fuga, consequatur!</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="ct-values" style="flex-direction: row-reverse;">
+                <img src="image567.png" alt="">
+                <div class="inf">
+                    <h3>Create brands</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui earum distinctio iure exercitationem vitae! Non ipsa harum, soluta quae iusto, exercitationem quasi aperiam veniam, magni libero odit! Fuga, consequatur!</p>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+        <section class="abt-lead">
+            <h2>Our Leadership Team</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt optio ipsam illum ipsum tenetur sed earum dolores eaque nam natus officiis, ducimus ea dicta facilis, molestiae dolor quasi sint.</p>
+            <div class="team-cards">
+                <div class="tcard">
+                    <img src="image567.png" alt="">
+                    <h4>John Doe</h4>
+                    <h5>Manager</h5>
+                </div>
+
+                <div class="tcard">
+                    <img src="image567.png" alt="">
+                    <h4>John Doe</h4>
+                    <h5>Manager</h5>
+                </div>
+
+                <div class="tcard">
+                    <img src="image567.png" alt="">
+                    <h4>John Doe</h4>
+                    <h5>Manager</h5>
+                </div>
+                 
+                <div class="tcard">
+                    <img src="image567.png" alt="">
+                    <h4>John Doe</h4>
+                    <h5>Manager</h5>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p> &copy; 2023 Ram Champions LLC, Dallas, Texas, USA | All Rights Reserved | Terms Of Use</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var McButton = $("[data=hamburger-menu]");
+        var McBar1 = McButton.find("b:nth-child(1)");
+        var McBar2 = McButton.find("b:nth-child(2)");
+        var McBar3 = McButton.find("b:nth-child(3)");
+        McButton.click(function () {
+            $(this).toggleClass("active");
+            $("#menu").slideToggle({
+                duration: 500,
+                easing: "swing",
+                start: function () {
+                    $("#menu").css("display", "flex");
+                }
+            });
+            if (McButton.hasClass("active")) {
+                McBar1.velocity({ top: "50%" }, { duration: 200, easing: "swing" });
+                McBar3.velocity({ top: "50%" }, { duration: 200, easing: "swing" })
+                    .velocity({ rotateZ: "90deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+                McButton.velocity({ rotateZ: "135deg" }, { duration: 800, delay: 200, easing: [500, 20] });
+            } else {
+                McButton.velocity("reverse");
+                McBar3.velocity({ rotateZ: "0deg" }, { duration: 800, easing: [500, 20] })
+                    .velocity({ top: "100%" }, { duration: 200, easing: "swing" });
+                McBar1.velocity("reverse", { delay: 800 });
+            }
+        });
+        function ctnbtn(){
+            window.location.href = "/contact.html";
+        } 
+    </script>
+</body>
+
+</html>

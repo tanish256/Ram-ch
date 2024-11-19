@@ -4,9 +4,16 @@ body {
     background-color: #fffbf3;
     transition: all 0.5s ease-in-out;
     scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: arial-round-nt, Helvetica, sans-serif;
 }
-
+@font-face {
+    font-family: arial-round;
+    src: url(arialroundedmtbold.ttf);
+}
+@font-face {
+    font-family: arial-round-nt;
+    src: url(arial-notbold.ttf);
+}
 .root {
 
 }
@@ -16,13 +23,20 @@ button {
 }
 .ss-cecofa{
     display: flex;
-    padding:5% 8%;
+    padding:1% 8%;
     gap: 3%;
+    .inf{
+        width: 50%;
+    }
+    img{
+        width: 40%;
+    }
 }
-
-
+.arial{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
 .content{
-    padding: 3% 8%;
+    padding: 1% 8%;
 
     table {
         background-color: ;
@@ -232,13 +246,15 @@ nav {
         background-color: #345733cc;
 
         h2 {
-            font-size: 30px;
+            font-size: 33px;
             color: #fffbf3;
+            font-family: arial-round;
         }
 
         h1 {
             color: #68DE1A;
             font-size: 22px;
+            font-family: arial-round;
         }
 
         .cecofa {
@@ -261,6 +277,8 @@ nav {
                 }
 
                 p {
+                    margin: 5px 0;
+                    font-family: arial-round;
                     color: #68DE1A;
                     font-size: 18px;
                 }
