@@ -5,6 +5,9 @@ body {
     transition: all 0.5s ease-in-out;
     scroll-behavior: smooth;
     font-family: arial-round-nt, Helvetica, sans-serif;
+    p{
+        line-height: 1.5;
+    }
 }
 @font-face {
     font-family: arial-round;
@@ -17,7 +20,92 @@ body {
 .root {
 
 }
+.abt-main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1,p{
+        margin: 10px 0;
+        width: 70%;
+    }
+    p{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 34px;
+    }
+}
+.abt-img{
+    display: flex;
+    width: 100%;
+    margin: 3% 0;
+    justify-content: center;
+    gap: 2%;
+    img{
+        width: 25%;
+        border-radius: 3px;
+        object-fit:cover ;
+    }
+}
+.O-values{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.ct-values{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    img{
+        aspect-ratio: 1.6/1;
+        object-fit: cover;
+        object-position: top;
+        width: 35%;
+        border-radius: 10px;
+    }
+    .inf{
+        width: 35%;
+    }
+}
+.abt-lead{
+    display: flex;
+    margin: 2% 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h2,p{
+        margin: 10px 0;
+        width: 70%;
+    }
+}
+.team-cards{
+    width: 80%;
+    margin: 2% 0;
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    .tcard{
+        min-width: 130px;
+        width: 20%;
+        img{
+            width: 100%;
+            aspect-ratio: 1/1.1;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 3%;
+        }
+        h4,h5{
+            margin: 0;
+        }
+    }
+}
 button {
     cursor: pointer;
 }
@@ -428,8 +516,16 @@ footer {
         border-radius: 0;
         box-shadow: unset;
     }
-
+    .card:hover{
+        border-radius: 0;
+        box-shadow: unset;
+        background-color: #355834;
+        color: white;
+        scale: 1.05;
+    }
     .card {
+        cursor: pointer;
+        transition: all ease 0.4s;
         width: 25%;
         padding: 15px;
         min-width: 250px;
@@ -461,8 +557,44 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .ct-values{
+        width: 90%;
+        flex-direction: column !important;
+        img{
+            width: 80%;
+            border-radius: 10px;
+        }
+        .inf{
+            width: 100%;
+        }
+    }
+    .abt-img{
+        justify-content: space-evenly;
+        img{
+            width: 28%;
+        }
+    }
+    .abt-main {
+        h1, p {
+            width: 90%;
+        }}
+    .abt-lead{
+        h2,p{
+            margin: 10px 0;
+            width: 90%;
+        }
+    }
+    .team-cards{
+        width: 100%;
+    }
     .ss-cecofa{
         flex-direction: column;
+        .inf{
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
     }
     .cecofa{
         .inf{
