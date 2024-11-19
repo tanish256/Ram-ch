@@ -257,7 +257,11 @@ nav {
         height: 100%;
         display: flex;
         align-items: center;
-
+        img.flag{
+            height: 35%;
+            filter: opacity(0.8);
+            border-radius: 2px;
+        }
         img {
             height: 70%;
         }
@@ -333,10 +337,6 @@ nav {
         display: flex;
         padding: 4% 2%;
         background-color: #345733cc;
-        background-image: url(gallery/flag3.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 
         h2 {
             font-size: 33px;
@@ -505,6 +505,10 @@ footer {
     justify-content: center;
     color: #fff0e6;
     height: 17vh;
+    img{
+        width: 8%;
+        aspect-ratio: 2/1;
+    }
 }
 
 .serv {
