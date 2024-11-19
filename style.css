@@ -127,7 +127,6 @@ button {
     padding: 1% 8%;
 
     table {
-        background-color: ;
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 60%;
@@ -267,6 +266,7 @@ nav {
         a {
             color: #355834;
             text-decoration: none;
+            font-size: 17px;
             transition: all 0.5s ease-in-out;
         }
 
