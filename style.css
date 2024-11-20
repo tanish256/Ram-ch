@@ -258,7 +258,7 @@ nav {
         display: flex;
         align-items: center;
         img.flag{
-            height: 35%;
+            height: 50%;
             filter: opacity(0.8);
             border-radius: 2px;
         }
