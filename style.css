@@ -4,12 +4,10 @@ body {
     background-color: #fffbf3;
     transition: all 0.5s ease-in-out;
     scroll-behavior: smooth;
+    object-fit: cover;
     font-family: arial-round-nt, Helvetica, sans-serif;
     p{
         line-height: 1.5;
-    }
-    img{
-        object-fit: cover;
     }
 }
 @font-face {
@@ -104,7 +102,7 @@ body {
             object-position: center;
             border-radius: 3%;
         }
-        h4,h5{
+        h3,h4{
             margin: 0;
         }
     }
@@ -558,7 +556,8 @@ footer {
             object-fit: cover;
         }
 
-        h3 {
+        h2 {
+            font-size: 1.17em;
             margin: 0;
         }
     }
