@@ -138,6 +138,12 @@
         <footer>
             <p> &copy;  2024 Ram Champions LLC, Dallas, Texas, USA | All Rights Reserved | Terms Of Use</p><img src="gallery/flag.jpg" alt="American Flag" class="flag">
         </footer>
+                  <!-- Modal for enlarging image -->
+    <div id="modal" class="modal">
+        <span id="closeBtn" class="close">&times;</span>
+        <img id="modalImg" class="modal-content">
+        <div id="caption" class="caption"></div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -145,40 +151,7 @@
     <script>
         AOS.init();
     </script>
-    <script>
-        var McButton = $("[data=hamburger-menu]");
-        var McBar1 = McButton.find("b:nth-child(1)");
-        var McBar2 = McButton.find("b:nth-child(2)");
-        var McBar3 = McButton.find("b:nth-child(3)");
-        McButton.click(function () {
-            $(this).toggleClass("active");
-            $("#menu").slideToggle({
-                duration: 500,
-                easing: "swing",
-                start: function () {
-                    $("#menu").css("display", "flex");
-                }
-            });
-            if (McButton.hasClass("active")) {
-                McBar1.velocity({ top: "50%" }, { duration: 200, easing: "swing" });
-                McBar3.velocity({ top: "50%" }, { duration: 200, easing: "swing" })
-                    .velocity({ rotateZ: "90deg" }, { duration: 800, delay: 200, easing: [500, 20] });
-                McButton.velocity({ rotateZ: "135deg" }, { duration: 800, delay: 200, easing: [500, 20] });
-            } else {
-                McButton.velocity("reverse");
-                McBar3.velocity({ rotateZ: "0deg" }, { duration: 800, easing: [500, 20] })
-                    .velocity({ top: "100%" }, { duration: 200, easing: "swing" });
-                McBar1.velocity("reverse", { delay: 800 });
-            }
-        });
-        function ctnbtn(){
-            window.location.href = "contact.html";
-        } 
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
-<!-- 
-we export and import both green robustor coffee
-usaimporter & exporter of african robusta coffee beans
-whole green coffee bean at $15 a pound -->
