@@ -847,3 +847,18 @@ footer {
     text-align: center;
     padding: 10px;
 }
+.learn{
+    animation: bounce 1s ease infinite;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .button:hover {
+    animation: bounce 0.5s ease-in-out;
+  }
+  
