@@ -93,5 +93,5 @@ McButton.click(function () {
 });
 });
 function ctnbtn() {
-    window.location.href = "contact.html";
+    window.location.href = "contact";
 } 
