@@ -95,3 +95,22 @@ McButton.click(function () {
 function ctnbtn() {
     window.location.href = "contact";
 } 
+
+(function() {
+    emailjs.init({
+      publicKey: "plnfsEzsWJ-GBpCjZ",
+    });
+})();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_dmfbhdc", "contact_form", this)
+      .then(function(response) {
+        console.log("SUCCESS", response);
+        alert("Message sent successfully!");
+      }, function(error) {
+        console.log("FAILED", error);
+        alert("Error sending message.");
+      });
+  });
