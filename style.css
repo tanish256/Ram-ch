@@ -343,7 +343,7 @@ nav {
         background-color: #345733cc;
 
         h2 {
-            font-size: 33px;
+            font-size: 30px;
             color: #fffbf3;
             z-index: 1;
             font-family: arial-round;
@@ -351,14 +351,14 @@ nav {
 
         h1 {
             color: #68DE1A;
-            font-size: 22px;
+            font-size: 20px;
             font-family: arial-round;
         }
 
         .cecofa {
             display: flex;
             align-items: center;
-            align-self: flex-end;
+
 
             img {
                 width: 30%;
@@ -371,14 +371,14 @@ nav {
 
                 h3 {
                     color: white;
-                    font-size: 26px;
+                    font-size: 23px;
                 }
 
                 p {
                     margin: 5px 0;
                     font-family: arial-round;
                     color: #68DE1A;
-                    font-size: 18px;
+                    font-size: 16px;
                 }
 
                 display: flex;

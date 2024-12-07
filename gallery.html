@@ -54,31 +54,25 @@
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
-        background-color: black;
+        background-color: rgb(29, 29, 29);
         padding: 20px 0;
         justify-content: center;
 
-        img {
-            max-height: 40vh;
+        img , video {
+            width: 16px;
+            object-fit: cover;
+            aspect-ratio: 2.2/1.6;
+            min-width: 200px;
+            border: 2px solid rgb(204, 204, 204);
         }
 
-        video {
-            max-width: 20vw;
-            aspect-ratio: 1.5/2;
-            object-fit: cover;
-        }
     }
 
     @media (max-width: 600px) {
         .gallery {
-            img {
-                width: 100%;
+            img, video {
+                width: 90%;
                 max-height: unset;
-            }
-
-            video {
-                width: 70%;
-                max-width: unset;
             }
         }
     }
