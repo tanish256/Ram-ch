@@ -963,3 +963,14 @@ footer {
   .fa-envelope-o{
     color: rgb(228, 84, 84);
   }
+  .sponsored{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    a{
+        color: rgba(80, 203, 80, 0.25);
+        margin: 0;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+  }
