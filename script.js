@@ -22,6 +22,24 @@
 // });
 $(document).ready(function () {
     // When any image or video is clicked
+    const images = $(".MainBg");
+    let currentIndex = 0;
+
+    // Function to fade images
+    function changeImage() {
+      // Remove 'active' class from the current image
+      $(images[currentIndex]).removeClass("active");
+
+      // Calculate the next image index
+      currentIndex = (currentIndex + 1) % images.length;
+
+      // Add 'active' class to the next image
+      $(images[currentIndex]).addClass("active");
+    }
+
+    // Change image every 10 seconds
+    setInterval(changeImage, 10000);
+
     $('img, video').click(function () {
         var element = $(this);  // The clicked element (img or video)
         var src = element.attr('src') || element.find('source').attr('src'); // Get the source of the clicked image or video
@@ -114,3 +132,4 @@ function ctnbtn() {
         alert("Error sending message.");
       });
   });
+
